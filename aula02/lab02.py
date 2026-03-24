@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Carregar a imagem:
-img = cv2.imread("casas.jpg")
+img = cv2.imread("halfLife.png")
 
 # Adicionar um ruído artificial:
 print("Shape da imagem original:")
@@ -18,9 +18,9 @@ print(noise.shape)
 noise_img = cv2.add(img, noise) # Somando matriz da imagem original com a imagem ruidosa
 
 # Aplicar filtros (remover ruídos):
-gaussian = cv2.GaussianBlur(noise_img, (5,5), 0)
-median = cv2.medianBlur(noise_img, 5)
-bilateral = cv2.bilateralFilter(noise_img, 9, 75, 75) 
+gaussian = cv2.GaussianBlur(noise_img, (5,5), 0) # Suaviza a imagem
+median = cv2.medianBlur(noise_img, 5) # Suaviza bordas
+bilateral = cv2.bilateralFilter(noise_img, 9, 75, 75) # Suaviza mantendo bordas
 
 # Imprimir os resultados:
 plt.subplot(2, 3, 1); plt.title("Original"); plt.imshow(img)
