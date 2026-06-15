@@ -1,0 +1,21 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Editores e SO
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Variáveis de ambiente (credenciais)
+.env
