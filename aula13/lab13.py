@@ -33,6 +33,10 @@ plt.show()
 # Histogramas
 plt.figure(figsize=(12, 5))
 plt.subplot(1, 2, 1)
+plt.hist(img.ravel(), bins=256)
+plt.title("Histograma imagem original")
+
+plt.subplot(1, 2, 2)
 plt.hist(diferenca.ravel(), bins=256)
 plt.title("Histograma imagem diferencial")
 plt.show()
